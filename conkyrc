@@ -1,0 +1,31 @@
+conky.config = {
+    alignment = 'top_middle',
+    background = false,
+    border_width = 1,
+    default_color = 'white',
+    draw_borders = false,
+    draw_outline = false,
+    draw_shades = false,
+    use_xft = true,
+    font = 'Sans:size=12',
+    gap_x = 0,
+    gap_y = 150,
+    no_buffers = true,
+    double_buffer = true,
+    output_to_desktop = true,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'normal',
+    own_window_transparent = true,
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    update_interval = 1.0,
+    uppercase = true,
+}
+
+conky.text = [[
+${alignc}${font Anurati:size=65}${color ffffff}${execi 3600 LANG=en_US.UTF-8 date +"%A"}
+${voffset -22}${alignc}${font Sans:size=13}${color ffffff}${time %d} ${execi 3600 LANG=en_US.UTF-8 date +"%B"} ${time %Y}
+${voffset -2}${alignc}${font Sans:size=15}${color ffffff}— ${time %H:%M} —
+]]
